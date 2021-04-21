@@ -1,0 +1,38 @@
+spring:
+  # mysql8数据库设置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123
+    #mysql8 要加时区
+    ###                 --------------------------------改数据库表
+    url: jdbc:mysql://127.0.0.1:3306/agrproducts?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    #mysql8?数据库连接驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 并设置返回的json日期格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+  # 设置资源文件访问路径与位置
+  mvc:
+    static-path-pattern: /image/**
+  web:
+    resources:
+      ###                 --------------------------------改路径
+      static-locations: file:E://resources/
+# mp xml 路径
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    #    mybatis logger配置
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #    路径
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  global-config:
+    # 逻辑删除
+    db-config:
+      logic-not-delete-value: 1
+      logic-delete-value: 0
