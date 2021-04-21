@@ -10,7 +10,7 @@
 
 - 代码编辑器:pycharm（学生注册），excel
 
- ![image-20210421201520671](https://user-images.githubusercontent.com/64359779/image-20210421201520671.png)
+ ![image-20210421201520671](README/image-20210421201520671.png)
  ![image-20210421201458877](README/image-20210421201458877.png) 
 
 数据处理过程：**？**
